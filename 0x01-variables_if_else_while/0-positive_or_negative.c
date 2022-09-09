@@ -4,17 +4,19 @@
 
 #include <stdio.h>
 
+/* what headers */
+
 
 
 /**
- *  * main - entry point
- *   *
  *
- *    * Description: Complete the source code in order to print whether the numb *    * er stored in the variable n is positive or negative.
+ *  * main - Entery is here
  *
- *       * Return: 0
+ *   * Description: goes here
  *
- *        */
+ *    * Return: anything other than 0
+ *
+ *     */
 
 int main(void)
 
@@ -28,31 +30,31 @@ int main(void)
 
 				n = rand() - RAND_MAX / 2;
 
-					if (n == 0)
+					/* your code goes there */
+
+					if (n > 0)
 
 							{
 
-										printf("%d is zero\n", n);
+										printf("%d is positive\n", n);
 
 											}
 
-						else if (n > 0)
+						else if (n == 0)
 
 								{
 
-											printf("%d is positive\n", n);
+											printf("%d is zero\n", n);
 
 												}
 
-							else if (n < 0)
+							else
 
 									{
 
 												printf("%d is negative\n", n);
 
 													}
-
-
 
 								return (0);
 
