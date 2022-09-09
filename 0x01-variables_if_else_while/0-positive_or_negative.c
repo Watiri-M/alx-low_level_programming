@@ -10,11 +10,11 @@
 
 /**
  *
- *  * main - Entery is here
+ *  * main - Entery point
  *
- *   * Description: goes here
+ *   * Description: Complete the source code in order to print whether the number stored in the variable n is positive or negative.
  *
- *    * Return: anything other than 0
+ *    * Return: 0
  *
  *     */
 
@@ -28,9 +28,7 @@ int main(void)
 
 			srand(time(0));
 
-				n = rand() - RAND_MAX / 2;
-
-					/* your code goes there */
+				n = rand() - RAND_MAX/2;
 
 					if (n > 0)
 
