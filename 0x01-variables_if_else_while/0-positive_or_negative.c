@@ -2,11 +2,13 @@
 #include <time.h>
 #include <stdio.h>
 /**
+ *
  *Main: Entry point of the code question
  *Description: number stored in the variable n is positive or negative.
  *Return: 0
+ *
 */
-int main(void) /**code*/
+int main(void)
 {
 int n;
 srand(time(0));
