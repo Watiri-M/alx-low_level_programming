@@ -2,9 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 /**
- *Main: Entry
+ *main - Entry point
+ *
  *Description: number stored in the variable n is positive or negative.
- *Return: the value of zero
+ *
+ * Return: the value of zero
  */
 int main(void)
 {
