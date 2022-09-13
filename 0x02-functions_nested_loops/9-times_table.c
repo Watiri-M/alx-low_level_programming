@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 
 
 
@@ -16,76 +16,62 @@ void times_table(void)
 
 {
 
-		int r, c;
+		int i, j, k;
 
 
 
-			for (r = 0; r <= 9; r++)
+			for (i = 0; i <= 9; i++)
 
 					{
 
-								for (c = 0; c <= 9; c++)
+								for (j = 0; j <= 9; j++)
 
 											{
 
-															int temp = r * c;
+															k = i * j;
 
+																		if (j == 0)
 
+																							_putchar('0' + k);
 
-																		if (temp / 10)
-
-																						{
-
-																											int n1;
-
-																															int n2;
-
-
-
-																																			n1 = temp / 10;
-
-																																							n2 = temp % 10;
-
-																																											_putchar('0' + n1);
-
-																																															_putchar('0' + n2);
-
-																																																		}
-
-																					else
+																					else if (k < 10)
 
 																									{
 
-																														if (c > 0)
+																														_putchar(' ');
 
-																																			{
-
-																																									_putchar(' ');
-
-																																													}
-
-																																		_putchar('0' + temp);
+																																		_putchar('0' + k);
 
 																																					}
 
-
-
-																								if (c < 9)
+																								else
 
 																												{
 
-																																	_putchar(',');
+																																	_putchar('0' + k / 10);
 
-																																					_putchar(' ');
+																																					_putchar('0' + k % 10);
 
 																																								}
 
-																										}
+																											if (j < 9)
+
+																															{
+
+																																				_putchar(',');
+
+																																								_putchar(' ');
+
+																																											}
+
+																													}
 
 										_putchar('\n');
 
 											}
 
 }
+
+
 
 
