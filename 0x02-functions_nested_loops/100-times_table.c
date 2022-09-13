@@ -2,6 +2,10 @@
 
 
 
+void _print_values(int);
+
+
+
 /**
  *
  *  * main - check the code.
@@ -16,83 +20,163 @@ void print_times_table(int n)
 
 {
 
-		int row, column, product;
+		if (n <= 15)
+
+				{
+
+							int i, j;
 
 
 
-			if (n >= 0 && n < 15)
+									for (i = 0; i <= n; i++)
 
-					{
+												{
 
-								for (row = 0; row <= n; row++)
+																for (j = 0; j <= n; j++)
 
-											{
+																				{
 
-															for (column = 0; column <= n; column++)
+																									int k = i * j;
 
-																			{
 
-																								product = row * column;
 
-																												if (column == 0)
+																													if (k / 100)
 
-																																		_putchar('0');
+																																		{
 
-																																else if (product < 10);
+																																								_print_values(k);
 
-																																				{
+																																												}
 
-																																										_putchar(',');
+																																	else if (k / 10)
 
-																																															_putchar(' ');
+																																						{
 
-																																																				_putchar(' ');
+																																												if (j > 0)
+
+																																																		{
 
 																																																									_putchar(' ');
 
-																																																														_putchar(product % 10 + '0');
+																																																														}
 
-																																																																		}
+																																																	_print_values(k);
 
-																																								else if (product >= 10 && product < 100)
+																																																					}
 
-																																													{
+																																					else
 
-																																																			_putchar(',');
+																																										{
 
-																																																								_putchar(' ');
+																																																if (j > 0)
+
+																																																						{
 
 																																																													_putchar(' ');
 
-																																																																		_putchar((product / 10) % 10 + '0')
+																																																																			_putchar(' ');
 
-																																																																								_putchar(product % 10 + '0');
+																																																																								}
 
-																																																																						}
+																																																					_print_values(k);
 
-																																												else if (product > 99 && product < 1000)
+																																																									}
 
-																																																	{
 
-																																																							_putchar(',');
 
-																																																												_putchar(' ');
+																																									if (j < n)
 
-																																																																	_putchar(product / 10 + '0');
+																																														{
 
-																																																																						_putchar((product / 10) % 10 + '0');
+																																																				_putchar(',');
 
-																																																																											_putchar(product % 10 + '0');
+																																																									_putchar(' ');
 
-																																																																															}
+																																																													}
 
-																																															}
+																																												}
 
-																		_putchar('\n');
+																			_putchar('\n');
 
-																				}
+																					}
 
-									}
+										}
+
+}
+
+
+
+
+
+
+
+/**
+ *
+ *  * main - check the code.
+ *
+ *   *
+ *
+ *    * Return: Always 0.
+ *
+ *     */
+
+void _print_values(int val)
+
+{
+
+		if (val / 100)
+
+				{
+
+							int n1;
+
+									int n2;
+
+											int n3;
+
+
+
+													n1 = val / 100;
+
+															n2 = (val % 100) / 10;
+
+																	n3 = val % 10;
+
+																			_putchar('0' + n1);
+
+																					_putchar('0' + n2);
+
+																							_putchar('0' + n3);
+
+																								}
+
+			else if (val / 10)
+
+					{
+
+								int n1;
+
+										int n2;
+
+
+
+												n1 = val / 10;
+
+														n2 = val % 10;
+
+																_putchar('0' + n1);
+
+																		_putchar('0' + n2);
+
+																			}
+
+				else
+
+						{
+
+									_putchar('0' + val);
+
+										}
 
 }
 
