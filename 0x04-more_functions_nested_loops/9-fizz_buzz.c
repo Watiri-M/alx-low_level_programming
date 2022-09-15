@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "main.h"
-#define stopVar 100
+#define fizzBuzz 100
 
 /**
  * main - Entry point
@@ -20,10 +20,10 @@ int main(void)
 			printf("Buzz");
 		else
 			printf("%d", n);
-		if (n != stopVar)
+		if (n != fizzBuzz)
 			printf(" ");
 		n++;
-	} while (n <= stopVar);
+	} while (n <= fizzBuzz);
 	printf("\n");
 
 	return (0);
