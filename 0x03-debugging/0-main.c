@@ -2,7 +2,7 @@
 
 
 /**
-* main - Tests function that prints is positive or negative
+* main - Entry point
 * Return: 0
 */
 
