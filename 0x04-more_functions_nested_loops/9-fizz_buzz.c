@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "main.h"
+#define stopVar 100
 
 /**
  * main - Entry point
