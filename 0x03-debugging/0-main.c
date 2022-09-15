@@ -2,7 +2,8 @@
 
 
 /**
-* main - Entry point
+* main - Entry poin
+* Description: test for a postitive_or_negative function
 * Return: 0
 */
 
