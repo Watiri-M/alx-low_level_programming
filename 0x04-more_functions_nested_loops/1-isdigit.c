@@ -11,7 +11,7 @@ int _isdigit(int c)
 
 {
 
-	if (c >= 45 && c <= 58)
+	if (c >= 48 && c <= 57)
 
 	{
 
