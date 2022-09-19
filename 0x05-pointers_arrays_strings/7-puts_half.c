@@ -14,7 +14,7 @@ void puts_half(char *s)
 
 {
 
-	int ph = strlen(ph), i;
+	int ph = strlen(s), i;
 
 	if (ph % 2 == 0)
 
