@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define stopLimit 2645
-#define asciiStop 127
-#define asciiStart 32
+#define stopLimit 2600
+#define asciiStop 120
+#define asciiStart 30
 
 
 
@@ -16,13 +16,13 @@ int main(void)
 
 {
 
-	char password[100];
+	char pwd[100];
 
-	int randValue, num = 0, i = 0;
+	int randValue, n = 0, i = 0;
 
 	srand(time(NULL));
 
-	while (num < stopLimit)
+	while (n < stopLimit)
 
 	{
 
@@ -31,12 +31,12 @@ int main(void)
 	if (randValue > asciiStart)
 
 	{
-	password[i++] = randValue;
-	num += randValue;
+	pwd[i++] = randValue;
+	n += randValue;
 	}
 	}
-	password[i++] = (2772 - num);
-	password[i] = '\0';
-	printf("%s", password);
+	pwd[i++] = (2772 - n);
+	pwd[i] = '\0';
+	printf("%s", pwd);
 	return (0);
 }
