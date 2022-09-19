@@ -3,7 +3,7 @@
 #include <time.h>
 #define stopLimit 2600
 #define asciiStop 120
-#define asciiStart 30
+#define asciiStart 32
 
 
 
