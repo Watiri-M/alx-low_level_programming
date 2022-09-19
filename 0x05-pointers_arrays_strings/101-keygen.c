@@ -32,7 +32,7 @@ int main(void)
 
 	{
 	password[i++] = randValue;
-	num += randVal;
+	num += randValue;
 	}
 	}
 	password[i++] = (2772 - num);
