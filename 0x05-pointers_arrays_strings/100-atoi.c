@@ -12,24 +12,24 @@ int _atoi(char *s)
 
 {
 	int i;
-	int sign;
-	unsigned int num;
+	int y;
+	unsigned int z;
 
 	i = 0;
-	sign = 1;
-	num = 0;
+	y = 1;
+	z = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
 		{
-			sign = -sign;
+			y = -y;
 		}
 		for (; s[i] >= '0' && s[i] <= '9'; i++)
 		{
-			num = num * 10 + ((int)s[i] - '0');
+			z = z * 10 + ((int)s[i] - '0');
 		}
 
-		if (num > 0 || s[i] == '\0')
+		if (z > 0 || s[i] == '\0')
 		{
 			break;
 		}
@@ -37,5 +37,5 @@ int _atoi(char *s)
 		i++;
 
 	}
-	return (num * sign);
+	return (z * y);
 }
