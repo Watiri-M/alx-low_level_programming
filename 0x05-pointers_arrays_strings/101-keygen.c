@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define stopLimit 2600
-#define asciiStop 120
+#define stopLimit 2645
+#define asciiStop 127
 #define asciiStart 32
 
 
