@@ -1,4 +1,7 @@
 #include "main.h"
+#include <limits.h>
+#include <string.h>
+#include "main.h"
 
 
 
@@ -50,5 +53,5 @@ int _atoi(char *s)
 	}
 	x++;
 	}
-	return (base * y);
+	return (z * y);
 }
