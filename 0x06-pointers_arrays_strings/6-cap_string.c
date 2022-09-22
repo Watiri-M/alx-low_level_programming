@@ -6,7 +6,7 @@
  * Return: capitalized string
  */
 
-char *cap_string(char *s)
+char *cap_string(char *str)
 
 {
 
