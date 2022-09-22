@@ -2,57 +2,35 @@
 
 /**
  * _strncat - Concatenates two strings
- * @dest: dest character
+ * @dest: character
  * @src: String character
  * @n: character
- * Return: Pointer resulting string
+ * Return: string
  */
 
 char *_strncat(char *dest, char *src, int n)
 
 {
 
-	int len;
 	int i;
+	int destlen = 0;
+	int counter = 0;
 
-	len = get_len(dest);
-	i = 0;
+	while (dest[counter] != '\0')
 
-	while (src[i] != '\0' && i < n)
 	{
-		dest[len + i] = src[i];
-		i++;
+
+	destlen++;
+	counter++;
 
 	}
 
-		dest[len + i] = '\0';
+	for (i = 0; i < n && src[i] != '\0'; i++)
+
+	dest[destlen + i] = src[i];
+
+	dest[destlen + i] = '\0';
 
 	return (dest);
 
-}
-
-/**
- * get_len - returns the length of a string
- * @s: String character
- * Return: length of string character
- */
-
-int get_len(char *s)
-
-{
-
-	int len;
-	int i;
-
-	len = 0;
-	i = 0;
-
-	while (s[i] != '\0')
-	{
-		++len;
-		i++;
-
-	}
-
-	return (len);
 }
