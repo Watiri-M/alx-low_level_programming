@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * print_number - Prints an integer out
@@ -37,5 +37,4 @@ void print_number(int n)
 	{
 		_putchar(((x / z) % 10) + 48);
 	}
-
 }
