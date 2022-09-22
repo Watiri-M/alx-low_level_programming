@@ -12,23 +12,23 @@ char *_strcat(char *dest, char *src)
 {
 
 	int i;
-	int destLength = 0;
-	int counter = 0;
+	int destLine = 0;
+	int x = 0;
 
-	while (dest[counter] != '\0')
+	while (dest[x] != '\0')
 
 	{
-	destLength++;
+	destLine++;
 
-	counter++;
+	x++;
 
 	}
 
 	for (i = 0; src[i] != '\0'; i++)
 
-	dest[destLength + i] = src[i];
+	dest[destLine + i] = src[i];
 
-	dest[destLength + i] = '\0';
+	dest[destLine + i] = '\0';
 
 	return (dest);
 }
