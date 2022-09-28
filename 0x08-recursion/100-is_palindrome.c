@@ -24,14 +24,14 @@ int _strlen_recursion(char *s)
  */
 int pd(char *s, int x)
 {
-	if (l < x)
+	if (x < 1)
 	{
-		return (x);
+		return (1);
 	}
 
-	if (*s == *(s + l))
+	if (*s == *(s + x))
 	{
-		return (p1(s + x, l - 2));
+		return (pd(s + 1, x - 2));
 	}
 	return (0);
 }
@@ -45,5 +45,5 @@ int is_palindrome(char *s)
 {
 	int len = _strlen_recursion(s);
 
-	return (pd(s, len - x));
+	return (pd(s, len - 1));
 }
