@@ -10,7 +10,7 @@
  */
 int main(int argc, char **argv)
 {
-	int z, i;
+	int z, y;
 	unsigned int i;
 	char *p;
 
@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 	}
 
 	z = strtol(argv[1], &p, 10);
-	i = 0;
+	y = 0;
 
 	if (!*p)
 	{
@@ -34,19 +34,19 @@ int main(int argc, char **argv)
 				if (z >= mon[i])
 				{
 
-					i += z / mon[i];
+					y += z / mon[i];
 					z = z % mon[i];
 				}
 			}
 		}
 		if (z == 1)
-			i++;
+			y++;
 	}
 	else
 	{
 		printf("Error\n");
 		return (1);
 	}
-	printf("%d\n", i);
+	printf("%d\n", y);
 	return (0);
 }
