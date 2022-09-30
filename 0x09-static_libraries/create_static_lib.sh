@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89
+gcc -wall -pedantic -werror -wextra -c *.c
 ar -rc libmy.a *.o
