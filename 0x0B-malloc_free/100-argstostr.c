@@ -12,7 +12,7 @@ int _strlen(char *s)
 	int x = 0;
 
 	for (; s[x] != '\0'; x++)
-		;
+	;
 	return (x);
 }
 
@@ -32,6 +32,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	for (; i < ac; i++, y++)
+
 	s = malloc(sizeof(char) * y + 1);
 	if (s == 0)
 		return (NULL);
