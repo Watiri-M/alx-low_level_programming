@@ -13,7 +13,7 @@
  */
 char *string_nconcat(char *str1, char *str2, unsigned int size)
 {
-	unsigned int x, y
+	unsigned int len1, len2
 	char *pnt;
 
 	if (str1 == NULL)
@@ -21,9 +21,9 @@ char *string_nconcat(char *str1, char *str2, unsigned int size)
 	if (str2 == NULL)
 		str2 = "";
 
-	x = strlen(str1);
-	y = strlen(str2) <= size ? strlen(str2) : size;
-	pnt = malloc(x + y + 1);
+	len1 = strlen(str1);
+	len2 = strlen(str2) <= size ? strlen(str2) : size;
+	pnt = malloc(len1 + len2 + 1);
 
 	if (pnt == NULL)
 		return (NULL);
