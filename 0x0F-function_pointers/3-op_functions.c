@@ -37,7 +37,7 @@ int op_mul(int a, int b)
 }
 
 /**
- * returns quotient of two numbers
+ * op_div - returns quotient of two numbers
  * @a: sum one
  * @b: sum two
  *
@@ -49,7 +49,7 @@ int op_div(int a, int b)
 }
 
 /**
- * returns the modulus of two numbers
+ * op_mod - returns the modulus of two numbers
  * @a: sum one
  * @b: sum two
  *

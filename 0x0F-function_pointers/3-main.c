@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	int n1, n2, result;
 	char operator;
-	int (*f)(int, int); 
+	int (*f)(int, int);
 
 	if (argc != 4)
 	{
