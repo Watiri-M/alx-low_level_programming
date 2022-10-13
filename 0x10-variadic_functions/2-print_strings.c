@@ -4,9 +4,9 @@
 #include <stdlib.h>
 
 /**
- * print_strings - prints strings, followed by a new line
- * @seperator: numbers are seperated via string
- * @n: character
+ * print_strings - prints a number followed by new line
+ * @seperator: character
+ * @n: number of counts
  *
  * Return: Null
  */
@@ -33,7 +33,7 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 		if (i < n - 1)
 		{
 			if (seperator)
-				printf("%s", separator);
+				printf("%s", seperator);
 		}
 	}
 	va_end(args);
