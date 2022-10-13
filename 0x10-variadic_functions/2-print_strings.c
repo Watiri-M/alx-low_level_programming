@@ -1,4 +1,7 @@
 #include "variadic_functions.h"
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_strings - prints strings, followed by a new line
@@ -11,28 +14,25 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 {
 	va_list args;
 	unsigned int i;
-
-	int *arr = malloc(sizeof(int) * n);
-
-	va_start(args, n);
-	for (i = 0; i < n; i++)
-	{
-		if (va_arg(args, char *) == NULL)
-			arr[i] = 1;
-		else
-			arr[i] = 0;
-	}
-	va_end(args);
+	char *str;
 
 	va_start(args, n);
 	for (i = 0; i < n; i++)
 	{
-		if (arr[i] == 1)
-			printf("(nil)");
-		else
-			printf("%s", va_arg(args, char *));
-		if (i < (n - 1) && separator)
+		str = va_arg(args, char *);
+
+		if (str)
 		{
+			printf("%s", str);
+		}
+		else
+		{
+			printf("(nil)");
+		}
+
+		if (i < n - 1)
+		{
+			if (seperator)
 			printf("%s", separator);
 		}
 	}
