@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * hare_toit - prints
+ * hare_tort - prints
  *
  * Return: void
  */
-void hare_toit(void) __attribute__((constructor));
+void hare_tort(void) 
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
