@@ -1,4 +1,6 @@
 #include <stdio.h>
+void hare_tort(void) __attribute__ ((constructor));
+
 
 /**
  * hare_tort - prints
