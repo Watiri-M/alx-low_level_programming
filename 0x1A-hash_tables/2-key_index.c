@@ -1,39 +1,16 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - adds data to a hash table
- * @ht: hash table.
- * @key: key to locate a slot on the hash table.
- * @value: value to save at that slot on the hash table.
+ * key_index - Get the index at which a key/value pair should
+ *             be stored in array of a hash table.
+ * @key: The key to get the index of.
+ * @size: The size of the array of the hash table.
  *
- * Return: 1 (Success) or 0 (Fail)
+ * Return: The index of the key.
+ *
+ * Description: Uses the djb2 algorithm.
  */
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-	hash_node_t *new;
-	unsigned long int index;
-
-	if (ht == NULL)
-		return (0);
-	if (key == NULL || value == NULL)
-		return (0);
-	if (ht->array == NULL)
-		return (0);
-	new = malloc(sizeof(hash_node_t));
-	if (new == NULL)
-		return (0);
-	new->key = (char *)key;
-	new->value = (char *)value;
-	new->next = NULL;
-	index = key_index((unsigned char *)key, ht->size);
-	if (ht->array[index] == NULL)
-	{
-		ht->array[index] = new;
-	}
-	else
-	{
-		new->next = ht->array[index];
-		ht->array[index] = new;
-	}
-	return (1);
+	return (hash_djb2(key) % size);
 }
